@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Item routes
+// Item routes for todo app
 Route::get('/items', [ItemController::class, 'index']);
 Route::prefix('/item')->group( function() {
     Route::get('/{id}', [ItemController::class, 'show']);
